@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: blue;
+        }
+
+        .tipografia {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    <ul></ul>
+    <button onclick="ponerTipografia()">cambiar tipografia</button>
+    <button onclick="decirNombre()">CLICK AQUI</button>
+
+
+</body>
+<script>
+    alert("¿quieres galletas?")
+    /*agrego texto*/
+    // const nombre = prompt("decime tu nombre")
+
+    /* NODOS */
+    const h1 = document.querySelector("h1")
+    h1.innerText = "hola " + nombre
+
+
+    document.querySelector("h1").innerText = "hola " + nombre
+    /*agrego html*/
+    document.querySelector("ul").innerHTML = "<li>uno</li><li>dos</li>"
+
+    /*funcion*/
+    function decirNombre() {
+        const nombre = prompt("decime tu nombre")
+        const h1 = document.querySelector("h1")
+        h1.innerText = "hola " + nombre
+
+        document.querySelector("body").style.backgroundColor = "green"
+    }
+    function ponerTipografia(){
+        document.querySelector("body").classList.toggle("tipografia")
+    }
+
+</script>
+
+</html>
